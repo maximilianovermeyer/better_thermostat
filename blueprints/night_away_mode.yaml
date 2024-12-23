@@ -14,7 +14,7 @@ blueprint:
       name: Binary Sensor
       selector:
         entity:
-          domain: boolean
+          domain: binary_sensor
 
     thermostat_target:
       name: Thermostats
