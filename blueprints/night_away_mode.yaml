@@ -12,6 +12,7 @@ blueprint:
           
     binary_sensor:
       name: Binary Sensor
+      default: {}
       selector:
         entity:
           domain: binary_sensor
