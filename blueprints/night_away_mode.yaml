@@ -1,14 +1,20 @@
 blueprint:
-  name: Better Thermostat Night mode
-  description: Set BT Thermostats to night mode if Schedule event is active.
+  name: Better Thermostat Night and Away mode
+  description: Set  BT Thermostats to a different temperature if Schedule event is active or a binary sensor is off.
   domain: automation
-  source_url: https://github.com/KartoffelToby/better_thermostat/blob/master/blueprints/night_mode.yaml
+  source_url: https://github.com/maximilianovermeyer/better_thermostat/edit/master/blueprints/night_mode.yaml
   input:
     night_times_schedule:
       name: Schedule helper
       selector:
         entity:
           domain: schedule
+          
+    binary_sensor:
+      name: Binary Sensor
+      selector:
+        entity:
+          domain: boolean
 
     thermostat_target:
       name: Thermostats
