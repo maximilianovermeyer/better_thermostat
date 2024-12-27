@@ -10,15 +10,11 @@ blueprint:
         entity:
           domain: schedule
           
-    night_temp:
-      name: Night Temperature
-      description: The target temperature at night
-      default: 18
+    binary_sensor:
+      name: Binary Sensor
       selector:
-        number:
-          min: 5
-          max: 35
-          unit_of_measurement: °C
+        entity:
+          domain: boolean
 
     thermostat_target:
       name: Thermostats
@@ -29,6 +25,16 @@ blueprint:
           entity:
             integration: better_thermostat
             domain: climate
+
+    night_temp:
+      name: Night Temperature
+      description: The target temperature at night
+      default: 18
+      selector:
+        number:
+          min: 5
+          max: 35
+          unit_of_measurement: °C
 
 mode: queued
 max_exceeded: silent
@@ -42,14 +48,6 @@ trigger:
     entity_id: !input night_times_schedule
     from: "off"
     to: "on"
-  - platform: state
-    entity_id: !input away_sensor
-    from: "true"
-    to: "false"
-  - platform: state
-    entity_id: !input away_sensor
-    from: "false"
-    to: "true"
 condition: []
 action:
   - if:
