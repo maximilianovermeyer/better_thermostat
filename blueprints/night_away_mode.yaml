@@ -10,7 +10,6 @@ blueprint:
         entity:
           domain: schedule
           
-
     night_temp:
       name: Night Temperature
       description: The target temperature at night
