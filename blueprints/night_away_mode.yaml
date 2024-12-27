@@ -19,23 +19,6 @@ blueprint:
           min: 5
           max: 35
           unit_of_measurement: °C
-          
-    away_sensor:
-      name: Binary Sensor
-      default: {}
-      selector:
-        entity:
-          domain: binary_sensor
-          
-    away_temp:
-      name: Away Temperature
-      description: The target temperature if 
-      default: 18
-      selector:
-        number:
-          min: 5
-          max: 35
-          unit_of_measurement: °C
 
     thermostat_target:
       name: Thermostats
