@@ -29,7 +29,7 @@ blueprint:
           
     away_temp:
       name: Away Temperature
-      description: The target temperature if the binary sensor returns "false"
+      description: The target temperature if the binary sensor returns false
       default: 18
       selector:
         number:
