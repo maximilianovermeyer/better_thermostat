@@ -27,7 +27,6 @@ blueprint:
         entity:
           domain: binary_sensor
           
-
     away_temp:
       name: Away Temperature
       description: The target temperature if the binary sensor returns "false"
