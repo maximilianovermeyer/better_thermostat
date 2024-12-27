@@ -29,7 +29,7 @@ blueprint:
           domain: binary_sensor
           
 
-    night_temp:
+    away_temp:
       name: Away Temperature
       description: The target temperature if the binary sensor returns "false"
       default: 18
