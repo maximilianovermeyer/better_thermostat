@@ -59,14 +59,6 @@ trigger:
     entity_id: !input night_times_schedule
     from: "off"
     to: "on"
-  - platform: state
-    entity_id: !input away_sensor
-    from: true
-    to: false
-  - platform: state
-    entity_id: !input away_sensor
-    from: false
-    to: true
 condition: []
 action:
   - if:
