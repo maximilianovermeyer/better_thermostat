@@ -20,7 +20,7 @@ blueprint:
           max: 35
           unit_of_measurement: °C
           
-    binary_sensor:
+    away_sensor:
       name: Binary Sensor
       default: {}
       selector:
@@ -60,11 +60,11 @@ trigger:
     from: "off"
     to: "on"
   - platform: state
-    entity_id: !input binary_sensor
+    entity_id: !input away_sensor
     from: "true"
     to: "false"
   - platform: state
-    entity_id: !input binary_sensor
+    entity_id: !input away_sensor
     from: "false"
     to: "true"
 condition: []
