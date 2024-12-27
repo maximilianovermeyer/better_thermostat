@@ -61,12 +61,12 @@ trigger:
     to: "on"
   - platform: state
     entity_id: !input away_sensor
-    from: "true"
-    to: "false"
+    from: true
+    to: false
   - platform: state
     entity_id: !input away_sensor
-    from: "false"
-    to: "true"
+    from: false
+    to: true
 condition: []
 action:
   - if:
